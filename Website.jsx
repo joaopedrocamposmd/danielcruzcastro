@@ -558,7 +558,7 @@ export default function App() {
             <img
               src="/foto-minha.jpeg"
               alt={surgeonData.name}
-              className="w-full max-w-md shadow-xl relative z-10 object-cover aspect-[4/5]"
+              className="w-full max-w-md shadow-xl relative z-10"
               style={{ borderRadius: 'var(--radius-lg)' }}
             />
           </div>
