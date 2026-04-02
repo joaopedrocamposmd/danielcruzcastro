@@ -372,7 +372,7 @@ const surgeonData = {
   yearsOfExperience: "12",
   linkedinUrl: "https://www.linkedin.com/in/daniel-castro-a65829245/",
   orcidId: "0000-0001-7559-266X",
-  googleSheetsCsvUrl: "https://docs.google.com/spreadsheets/d/e/2PACX-1vQyXFTKmHSbZhTmOYi9Oqo4B-r71zZ_TJE_oBIXLH61d7Ln7E2QHoyDf6PFRbX3A5kyYW5ji5DHWajg/pub?gid=462780236&single=true&output=csv",
+  googleSheetsCsvUrl: "https://docs.google.com/spreadsheets/d/e/2PACX-1vSPteHV0vd_wCQyvKJ6HqatkQV_F2MxgDerJbwoNlpU8R0Us94tdPUO1s92EMbKk-9g_ywQ1aCVTVuj/pub?gid=0&single=true&output=csv",
   schedulingUrl: "https://www.lusiadas.pt/corpo-clinico/dr-daniel-cruz-castro",
   expertises: [
     {
