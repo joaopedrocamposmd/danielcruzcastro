@@ -173,15 +173,191 @@ const IllustrationFallback = () => (
       </pattern>
     </defs>
     <rect width="100%" height="100%" fill="url(#gridFallback)" />
-
-    {/* Abstract fallback medical graphic */}
     <circle cx="200" cy="100" r="40" fill="none" stroke="rgba(59, 135, 123, 0.2)" strokeWidth="2" strokeDasharray="4 4" />
     <circle cx="200" cy="100" r="20" fill="none" stroke="rgba(59, 135, 123, 0.4)" strokeWidth="1" />
     <path d="M 195 95 L 205 105 M 205 95 L 195 105" stroke="rgba(59, 135, 123, 0.4)" strokeWidth="2" strokeLinecap="round" />
-
     <text x="200" y="160" fill="rgba(44, 62, 80, 0.4)" fontSize="11" fontFamily="monospace" textAnchor="middle" fontWeight="500">MEDICAL_DATA_PENDING</text>
   </svg>
 );
+
+const IllustrationHV = () => (
+  <svg viewBox="0 0 400 220" className="w-full h-full" style={{ backgroundColor: 'var(--color-bg)' }}>
+    <defs>
+      <pattern id="gridHV" width="20" height="20" patternUnits="userSpaceOnUse">
+        <path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(44, 62, 80, 0.05)" strokeWidth="1" />
+      </pattern>
+      <linearGradient id="boneHV" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stopColor="#f4f7f6" />
+        <stop offset="100%" stopColor="#e2e8e6" />
+      </linearGradient>
+    </defs>
+    <rect width="100%" height="100%" fill="url(#gridHV)" />
+    {/* Metatarsal Anatomy (Top down abstraction) */}
+    <path d="M 170 30 C 160 80, 150 120, 150 140 C 150 160, 165 170, 175 160 C 185 150, 185 80, 180 30 Z" fill="url(#boneHV)" stroke="#2c3e50" strokeWidth="2" opacity="0.6" />
+    <path d="M 200 40 L 190 120 C 190 130, 205 130, 205 120 L 210 40 Z" fill="url(#boneHV)" stroke="#2c3e50" strokeWidth="2" opacity="0.4" />
+    <path d="M 230 45 L 220 110 C 220 120, 235 120, 235 110 L 240 45 Z" fill="url(#boneHV)" stroke="#2c3e50" strokeWidth="2" opacity="0.3" />
+
+    {/* Highlighted Bunion (Exostosis) */}
+    <path d="M 148 135 C 135 140, 130 155, 145 165" fill="#e67e22" opacity="0.3" stroke="none" />
+    <path d="M 148 135 C 135 140, 130 155, 145 165" fill="none" stroke="#e67e22" strokeWidth="2" />
+
+    {/* Big Toe Deviation (Hallux Valgus) */}
+    <path d="M 160 160 L 190 200 C 195 205, 210 200, 200 190 L 175 145" fill="url(#boneHV)" stroke="#2c3e50" strokeWidth="2" opacity="0.8" />
+    <line x1="167" y1="140" x2="190" y2="200" stroke="#e67e22" strokeWidth="1.5" strokeDasharray="4 4" />
+    <line x1="167" y1="140" x2="167" y2="200" stroke="#3b877b" strokeWidth="1.5" strokeDasharray="4 4" opacity="0.5" />
+    <path d="M 167 195 A 55 55 0 0 0 188 195" fill="none" stroke="#e67e22" strokeWidth="1.5" />
+
+    {/* Clinical UI Data */}
+    <circle cx="140" cy="150" r="15" fill="none" stroke="#e67e22" strokeWidth="2" strokeDasharray="2 2" />
+    <line x1="140" y1="150" x2="80" y2="100" stroke="#3b877b" strokeWidth="1.5" />
+    <circle cx="140" cy="150" r="3" fill="#e67e22" />
+    <text x="80" y="85" fill="#2c3e50" fontSize="11" fontFamily="monospace" fontWeight="600">HALLUX_VALGUS</text>
+    <text x="80" y="100" fill="#e67e22" fontSize="9" fontFamily="monospace">HVA_ANGLE: 32° (SEV)</text>
+  </svg>
+);
+
+const IllustrationAnklefracture = () => (
+  <svg viewBox="0 0 400 220" className="w-full h-full" style={{ backgroundColor: 'var(--color-bg)' }}>
+    <defs>
+      <pattern id="gridAF" width="20" height="20" patternUnits="userSpaceOnUse">
+        <path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(44, 62, 80, 0.05)" strokeWidth="1" />
+      </pattern>
+      <linearGradient id="boneAF" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stopColor="#f4f7f6" />
+        <stop offset="100%" stopColor="#cbd5e1" />
+      </linearGradient>
+    </defs>
+    <rect width="100%" height="100%" fill="url(#gridAF)" />
+
+    {/* Tibia & Fibula Distal (Anterior View) */}
+    <path d="M 150 20 L 150 110 C 150 140, 190 140, 190 120 L 190 20 Z" fill="url(#boneAF)" stroke="#2c3e50" strokeWidth="2" opacity="0.8" />
+    <path d="M 210 20 L 210 130 C 210 160, 230 160, 230 140 L 230 20 Z" fill="url(#boneAF)" stroke="#2c3e50" strokeWidth="2" opacity="0.8" />
+
+    {/* Talus */}
+    <path d="M 160 140 C 160 125, 215 125, 215 140 C 215 160, 160 160, 160 140 Z" fill="url(#boneAF)" stroke="#2c3e50" strokeWidth="2" opacity="0.8" />
+
+    {/* Fracture Line on Fibula (Lateral Malleolus) */}
+    <path d="M 205 110 L 215 120 L 212 125 L 225 130 L 220 135 L 235 140" fill="none" stroke="#e67e22" strokeWidth="2.5" />
+
+    {/* Osteosynthesis Hardware (Plate & Screws) */}
+    <path d="M 215 90 L 215 150" fill="none" stroke="#94a3b8" strokeWidth="6" opacity="0.9" strokeLinecap="round" />
+    <circle cx="215" cy="100" r="1.5" fill="#f8fafc" />
+    <circle cx="215" cy="115" r="1.5" fill="#f8fafc" />
+    <circle cx="215" cy="130" r="1.5" fill="#f8fafc" />
+    <circle cx="215" cy="145" r="1.5" fill="#f8fafc" />
+
+    {/* UI Elements */}
+    <circle cx="225" cy="125" r="22" fill="none" stroke="#3b877b" strokeWidth="1.5" strokeDasharray="3 3" />
+    <line x1="245" y1="125" x2="280" y2="125" stroke="#3b877b" strokeWidth="1.5" />
+    <text x="285" y="120" fill="#2c3e50" fontSize="11" fontFamily="monospace" fontWeight="600">ORIF_FIBULA</text>
+    <text x="285" y="135" fill="#e67e22" fontSize="9" fontFamily="monospace">FX_TYPE: WEBER B</text>
+  </svg>
+);
+
+const IllustrationAnkleSprain = () => (
+  <svg viewBox="0 0 400 220" className="w-full h-full" style={{ backgroundColor: 'var(--color-bg)' }}>
+    <defs>
+      <pattern id="gridAS" width="20" height="20" patternUnits="userSpaceOnUse">
+        <path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(44, 62, 80, 0.05)" strokeWidth="1" />
+      </pattern>
+      <linearGradient id="boneAS" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stopColor="#f4f7f6" />
+        <stop offset="100%" stopColor="#cbd5e1" />
+      </linearGradient>
+    </defs>
+    <rect width="100%" height="100%" fill="url(#gridAS)" />
+
+    {/* Lateral Ankle Bones (Fibula + Talus + Calcaneus) */}
+    <path d="M 180 30 L 180 120 C 180 140, 195 150, 200 130 L 205 30 Z" fill="url(#boneAS)" stroke="#2c3e50" strokeWidth="2" opacity="0.7" />
+    <path d="M 160 140 C 160 130, 220 130, 220 150 C 220 160, 200 170, 160 170 C 150 170, 150 150, 160 140 Z" fill="url(#boneAS)" stroke="#2c3e50" strokeWidth="2" opacity="0.6" />
+    <path d="M 150 160 C 140 180, 170 210, 200 200 C 230 190, 230 170, 210 160 Z" fill="url(#boneAS)" stroke="#2c3e50" strokeWidth="2" opacity="0.5" />
+
+    {/* Ligaments (ATFL, CFL) */}
+    <line x1="190" y1="140" x2="175" y2="180" stroke="#3b877b" strokeWidth="6" opacity="0.8" strokeLinecap="round" />
+    {/* Torn ATFL */}
+    <path d="M 185 135 L 165 145" stroke="#e67e22" strokeWidth="5" strokeLinecap="round" fill="none" />
+    <path d="M 175 140 L 155 150" stroke="#e67e22" strokeWidth="5" strokeLinecap="round" fill="none" />
+    <path d="M 160 135 L 170 155" stroke="#fff" strokeWidth="4" />
+
+    {/* Focus Ring & UI */}
+    <circle cx="165" cy="145" r="16" fill="none" stroke="#e67e22" strokeWidth="2" strokeDasharray="4 4" />
+    <line x1="165" y1="129" x2="165" y2="90" stroke="#3b877b" strokeWidth="1.5" />
+    <line x1="165" y1="90" x2="230" y2="90" stroke="#3b877b" strokeWidth="1.5" />
+    <text x="235" y="85" fill="#2c3e50" fontSize="11" fontFamily="monospace" fontWeight="600">ATFL_RUPTURE</text>
+    <text x="235" y="100" fill="#e67e22" fontSize="9" fontFamily="monospace">STATUS: COMPLETE TEAR</text>
+  </svg>
+);
+
+const Illustrationflatfoot = () => (
+  <svg viewBox="0 0 400 220" className="w-full h-full" style={{ backgroundColor: 'var(--color-bg)' }}>
+    <defs>
+      <pattern id="gridFF" width="20" height="20" patternUnits="userSpaceOnUse">
+        <path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(44, 62, 80, 0.05)" strokeWidth="1" />
+      </pattern>
+      <linearGradient id="boneFF" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stopColor="#f4f7f6" />
+        <stop offset="100%" stopColor="#e2e8e6" />
+      </linearGradient>
+    </defs>
+    <rect width="100%" height="100%" fill="url(#gridFF)" />
+
+    {/* Medial View Foot Bones (Abstracted Flat Foot Arch) */}
+    <path d="M 120 180 C 130 190, 160 195, 200 195 C 240 195, 270 190, 280 180 C 260 160, 230 140, 200 140 C 170 140, 140 160, 120 180 Z" fill="url(#boneFF)" stroke="#2c3e50" strokeWidth="2" opacity="0.7" />
+
+    {/* Expected Normal Arch (Dashed) */}
+    <path d="M 130 185 C 160 155, 200 140, 270 185" fill="none" stroke="#3b877b" strokeWidth="2" strokeDasharray="6 4" opacity="0.8" />
+
+    {/* Plantar Aspect Ground Line */}
+    <line x1="80" y1="195" x2="320" y2="195" stroke="#2c3e50" strokeWidth="3" strokeLinecap="round" opacity="0.3" />
+
+    {/* Posterior Tibial Tendon (Dysfunctional) */}
+    <path d="M 230 100 C 220 140, 210 160, 180 170" fill="none" stroke="#e67e22" strokeWidth="4" strokeLinecap="round" opacity="0.8" />
+
+    <circle cx="180" cy="170" r="4" fill="#e67e22" />
+    <line x1="180" y1="170" x2="120" y2="120" stroke="#3b877b" strokeWidth="1.5" />
+    <text x="60" y="105" fill="#2c3e50" fontSize="11" fontFamily="monospace" fontWeight="600">MEDIAL_ARCH_COL</text>
+    <text x="60" y="120" fill="#e67e22" fontSize="9" fontFamily="monospace">PTT_DYSFUNCTION: ++</text>
+  </svg>
+);
+
+const IllustrationplantarF = () => (
+  <svg viewBox="0 0 400 220" className="w-full h-full" style={{ backgroundColor: 'var(--color-bg)' }}>
+    <defs>
+      <pattern id="gridPF" width="20" height="20" patternUnits="userSpaceOnUse">
+        <path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(44, 62, 80, 0.05)" strokeWidth="1" />
+      </pattern>
+      <linearGradient id="bonePF" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stopColor="#f4f7f6" />
+        <stop offset="100%" stopColor="#cbd5e1" />
+      </linearGradient>
+    </defs>
+    <rect width="100%" height="100%" fill="url(#gridPF)" />
+
+    {/* Calcaneus Bone side view */}
+    <path d="M 130 120 C 130 170, 160 170, 180 160 C 200 150, 180 110, 150 110 Z" fill="url(#bonePF)" stroke="#2c3e50" strokeWidth="2" opacity="0.8" />
+    {/* Metatarsals abstract */}
+    <path d="M 175 155 C 200 160, 260 165, 270 150 C 280 135, 250 130, 185 140 Z" fill="url(#bonePF)" stroke="#2c3e50" strokeWidth="2" opacity="0.4" />
+
+    {/* Heel Spur Element */}
+    <path d="M 160 160 L 175 168 L 175 158 Z" fill="url(#bonePF)" stroke="#2c3e50" strokeWidth="1" />
+
+    {/* Plantar Fascia */}
+    <path d="M 160 163 C 200 175, 230 170, 265 155" fill="none" stroke="#3b877b" strokeWidth="5" strokeLinecap="round" opacity="0.7" />
+
+    {/* Inflammation area */}
+    <ellipse cx="170" cy="165" rx="15" ry="8" fill="#e67e22" opacity="0.4" />
+    <path d="M 165 163 L 175 168" stroke="#fff" strokeWidth="2" />
+    <path d="M 168 170 L 173 160" stroke="#fff" strokeWidth="2" />
+
+    {/* UI Elements */}
+    <circle cx="170" cy="165" r="3" fill="#e67e22" />
+    <line x1="170" y1="165" x2="170" y2="100" stroke="#3b877b" strokeWidth="1.5" />
+    <line x1="170" y1="100" x2="230" y2="100" stroke="#3b877b" strokeWidth="1.5" />
+    <text x="235" y="95" fill="#2c3e50" fontSize="11" fontFamily="monospace" fontWeight="600">PLANTAR_FASCIITIS</text>
+    <text x="235" y="110" fill="#e67e22" fontSize="9" fontFamily="monospace">CALCANEAL_SPUR: DETECTED</text>
+  </svg>
+);
+
 
 
 
@@ -202,27 +378,27 @@ const surgeonData = {
     {
       title: "Deformidades do antepé",
       desc: "Tratamento cirúrgico e conservador de hallux valgus (joanetes), artrose do hallux, dedos em garra, neuroma de Morton e outras causas de dor do antepé .",
-      illustration: <IllustrationFallback />
+      illustration: <IllustrationHV />
     },
     {
       title: "Patologia e traumatologia do tornozelo",
       desc: "Técnicas de reconstrução/reparação anatómica de fraturas e lesões ligamentares e tratamento de lesões condrais (cartilagem) focadas na longevidade da articulação.",
-      illustration: <IllustrationFallback />
+      illustration: <IllustrationAnklefracture />
     },
     {
       title: "Patologia da Instabilidade do tornozelo (entorse)",
       desc: "Tratamento conservador e cirúrgico de entorse do tornozelo e instabildide crónica (entorse de repetição), com vista a estabilizaçao e preservaçao articular",
-      illustration: <IllustrationFallback />
+      illustration: <IllustrationAnkleSprain />
     },
     {
       title: "Cirurgia de Preservação Articular",
       desc: "Osteotomias de realinhamento para correção de eixos retropé e preservação da articulação biológica em casos de pé plano ou pé cavo, bem como artrodeses em casos de deformdiades mais avançadas com artrose.",
-      illustration: <IllustrationFallback />
+      illustration: <Illustrationflatfoot />
     },
     {
       title: "talalgia - dor no calcanhar",
       desc: "Estudo e tratamento das causas de dor do calcanhar, vulgarmente conhecido como esporão ou faceíte plantar .",
-      illustration: <IllustrationFallback />
+      illustration: <IllustrationplantarF />
     }
   ],
   experiences: [
